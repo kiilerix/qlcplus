@@ -39,6 +39,10 @@ of other lighting control commercial softwares.
 #############################################################################
 
 %build
+# qmake-qt5 will only include existing files in install_translations - create the .qm files before *really* running qmake-qt5
+qmake-qt5
+make translate
+
 qmake-qt5
 make
 
